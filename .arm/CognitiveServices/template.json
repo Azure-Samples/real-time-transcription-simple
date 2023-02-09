@@ -1,53 +1,57 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "cognitive_services": {
-            "defaultValue": "transcription-00000",
-            "type": "String"
-        },
-        "resource_group": {
+        "resourceGroupName": {
+            "type": "string",
             "defaultValue": "transcription",
-            "type": "String"
+            "metadata": {
+                "description": "The name of the resource group to be created."
+            }
+        },
+        "cognitiveServiceName": {
+            "type": "string",
+            "defaultValue": "transcription-0000",
+            "metadata": {
+                "description": "The name of the Cognitive Service to be created."
+            }
+        },
+        "cognitiveServiceSku": {
+            "type": "string",
+            "defaultValue": "S0",
+            "metadata": {
+                "description": "The SKU of the Cognitive Service to be created."
+            }
         },
         "location": {
-            "defaultValue": "australiaeast",
-            "type": "String"
-        },
-        "region": {
-            "defaultValue": "Australia East",
-            "type": "String"
-        }      
+            "type": "string",
+            "defaultValue": "westus",
+            "metadata": {
+                "description": "The location where the resource group and Cognitive Service will be created."
+            }
+        }
     },
-    "variables": {},
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2022-12-01",
-            "region": "[parameters('region')]",
-            "name": "[parameters('resource_group')]"
+            "apiVersion": "2019-10-01",
+            "name": "[parameters('resourceGroupName')]",
+            "location": "[parameters('location')]",
+            "properties": {}
         },
         {
             "type": "Microsoft.CognitiveServices/accounts",
-            "apiVersion": "2022-12-01",
-            "name": "[parameters('cognitive_services')]",
+            "apiVersion": "2017-04-18",
+            "name": "[concat(parameters('resourceGroupName'), '/', parameters('cognitiveServiceName'))]",
             "location": "[parameters('location')]",
-            "resourceGroup":"[parameters('resource_group')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Resources/resourceGroups/', parameters('resourceGroupName'))]"
+            ],
             "sku": {
-                "name": "F0"
+                "name": "[parameters('cognitiveServiceSku')]"
             },
-            "kind": "SpeechServices",
-            "identity": {
-                "type": "None"
-            },
-            "properties": {
-                "networkAcls": {
-                    "defaultAction": "Allow",
-                    "virtualNetworkRules": [],
-                    "ipRules": []
-                },
-                "publicNetworkAccess": "Enabled"
-            }
+            "kind": "TextAnalytics",
+            "properties": {}
         }
     ]
 }

@@ -2,16 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "cognitive_services": {
+        "resourceGroupName": {
             "value": null
         },
-        "resource_group": {
+        "cognitiveServiceName": {
+            "value": null
+        },
+        "cognitiveServiceSku": {
             "value": null
         },
         "location": {
-            "value": null
-        },
-        "region": {
             "value": null
         }    
     }
