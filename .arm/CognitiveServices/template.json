@@ -32,7 +32,7 @@
             "apiVersion": "2022-12-01",
             "name": "[parameters('cognitive_services')]",
             "location": "[parameters('location')]",
-            "resource_group":"[parameters('resource_group')]",
+            "resourceGroup":"[parameters('resource_group')]",
             "sku": {
                 "name": "F0"
             },
