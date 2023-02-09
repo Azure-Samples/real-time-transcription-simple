@@ -18,7 +18,7 @@
         },
         "cognitiveServiceSku": {
             "type": "string",
-            "defaultValue": "S0",
+            "defaultValue": "F0",
             "metadata": {
                 "description": "The SKU of the Cognitive Service to be created."
             }
@@ -31,26 +31,28 @@
             }
         }
     },
+    "variables": {},
     "resources": [
         {
-            "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2019-10-01",
-            "name": "[parameters('resourceGroupName')]",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "apiVersion": "2022-12-01",
+            "name": "[parameters('cognitiveServiceName')]",
             "location": "[parameters('location')]",
-            "properties": {},
-            "resources": [
-                {
-                    "type": "Microsoft.CognitiveServices/accounts",
-                    "apiVersion": "2017-04-18",
-                    "name": "[concat(parameters('cognitiveServiceName'))]",
-                    "location": "[parameters('location')]",
-                    "sku": {
-                        "name": "[parameters('cognitiveServiceSku')]"
-                    },
-                    "kind": "TextAnalytics",
-                    "properties": {}
-                }
-            ]
+            "sku": {
+                "name": "[parameters('cognitiveServiceSku')]"
+            },
+            "kind": "SpeechServices",
+            "identity": {
+                "type": "None"
+            },
+            "properties": {
+                "networkAcls": {
+                    "defaultAction": "Allow",
+                    "virtualNetworkRules": [],
+                    "ipRules": []
+                },
+                "publicNetworkAccess": "Enabled"
+            }
         }
     ]
 }
