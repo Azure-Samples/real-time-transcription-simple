@@ -20,7 +20,7 @@
         {
             "type": "Microsoft.Resources/resourceGroups",
             "apiVersion": "2022-12-01",
-            "location": "[parameters('location')]",
+            "region": "[parameters('location')]",
             "name": "[parameters('resource_group')]"
         },
         {
