@@ -33,7 +33,6 @@
     },
     "resources": [
         {
-
             "type": "Microsoft.CognitiveServices/accounts",
             "apiVersion": "2017-04-18",
             "name": "[concat(parameters('resourceGroupName'), '/', parameters('cognitiveServiceName'))]",
