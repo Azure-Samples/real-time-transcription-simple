@@ -37,22 +37,24 @@
             "apiVersion": "2019-10-01",
             "name": "[parameters('resourceGroupName')]",
             "location": "[parameters('location')]",
-            "properties": {}
-        },
-        {
-            "type": "Microsoft.CognitiveServices/accounts",
-            "apiVersion": "2017-04-18",
-            "name": "[concat(parameters('resourceGroupName'), '/', parameters('cognitiveServiceName'))]",
-            "location": "[parameters('location')]",
-            "resourceGroup":"[parameters('resourceGroupName')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Resources/resourceGroups/', parameters('resourceGroupName'))]"
-            ],
-            "sku": {
-                "name": "[parameters('cognitiveServiceSku')]"
-            },
-            "kind": "SpeechServices",
-            "properties": {}
+            "properties": {},
+            "resources": [
+                {
+                    "type": "Microsoft.CognitiveServices/accounts",
+                    "apiVersion": "2017-04-18",
+                    "name": "[concat(parameters('resourceGroupName'), '/', parameters('cognitiveServiceName'))]",
+                    "location": "[parameters('location')]",
+                    "resourceGroup": "[parameters('resourceGroupName')]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Resources/resourceGroups/', parameters('resourceGroupName'))]"
+                    ],
+                    "sku": {
+                        "name": "[parameters('cognitiveServiceSku')]"
+                    },
+                    "kind": "SpeechServices",
+                    "properties": {}
+                }
+            ]
         }
     ]
 }
