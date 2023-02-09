@@ -1,32 +1,59 @@
-# Project Name
+# Real Time Transcription - Simple
 
-(short, 1-3 sentenced, description of the project)
+This repository demonstrates how to quickly and easily build a Real Time Transcription running on a web browser. In fact, the target is for you to build your first application in less than 1/2 hour.
 
-## Features
+## The Tech
 
-This project framework provides the following features:
+* Azure Speech-to-Text
+* React.js (we added bootstrap to make things look good)
+* Devcontainers - inside Visual Studio Code, we created a container with all the pre-requisite, so that you can hit the ground running.
 
-* Feature 1
-* Feature 2
-* ...
+By following the steps under [Installation](installation) you wil be able to get started quickly
+
+## The Features
+
+You will get an app like the one shown below:
+
+![Deploy to Azure](https://aka.ms/deploytoazurebutton)
+
+The architecture is shown below:
+
+
+
 
 ## Getting Started
 
+
 ### Prerequisites
 
-(ideally very short, if any)
+This repository is used to build the application on a personal computer or on GitHub Codespaces. It uses a devcontaier.
 
-- OS
-- Library version
-- ...
+You need to have the following on your personal computer (PC, Mac or Linux):
+
+* Visual Studio Code - you can install it from here: https://code.visualstudio.com/Download
+* Docker Desktop - you can install it from here: https://docs.docker.com/desktop/
+* Git - you can install it from here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 ### Installation
 
-(ideally very short)
+#### Azure Services
 
-- npm install [package name]
-- mvn install
-- ...
+You will need **Azure Cognitive Services** set up for that. 
+
+* Click the button bellow to create the needed services in Azure:
+
+
+
+Once you have the prerequisites met:
+
+* Clone the repository
+* Open it with Visual Studio Code. 
+
+You will get a screen like this:
+
+* Click **Open with Repository** to open the Devcontainer - node, yarn are installed on it - and that is all you need to run your app.
+
+
 
 ### Quickstart
 (Add steps to get up and running quickly)
