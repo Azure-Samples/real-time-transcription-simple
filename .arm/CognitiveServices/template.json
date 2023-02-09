@@ -44,10 +44,6 @@
                     "apiVersion": "2017-04-18",
                     "name": "[concat(parameters('resourceGroupName'), '/', parameters('cognitiveServiceName'))]",
                     "location": "[parameters('location')]",
-                    "resourceGroup": "[parameters('resourceGroupName')]",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Resources/resourceGroups/', parameters('resourceGroupName'))]"
-                    ],
                     "sku": {
                         "name": "[parameters('cognitiveServiceSku')]"
                     },
