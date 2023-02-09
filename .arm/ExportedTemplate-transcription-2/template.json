@@ -2,32 +2,18 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "cognitive_services": {
+        "accounts_transcription_00000_name": {
             "defaultValue": "transcription-00000",
             "type": "String"
-        },
-        "resource_group": {
-            "defaultValue": "transcription",
-            "type": "String"
-        },
-        "location": {
-            "defaultValue": "australiaeast",
-            "type": "String"
-        }        
+        }
     },
     "variables": {},
     "resources": [
         {
-            "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2022-12-01",
-            "location": "[parameters('location')]",
-            "name": "[parameters('resource_group')]"
-        },
-        {
             "type": "Microsoft.CognitiveServices/accounts",
             "apiVersion": "2022-12-01",
-            "name": "[parameters('cognitive_services')]",
-            "location": "[parameters('location')]",
+            "name": "[parameters('accounts_transcription_00000_name')]",
+            "location": "australiaeast",
             "sku": {
                 "name": "F0"
             },

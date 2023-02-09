@@ -14,7 +14,7 @@ By following the steps under [Installation](installation) you wil be able to get
 
 You will get an app like the one shown below:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FAzure-Samples%2Freal-time-transcription-simple%2Ftree%2Fmain%2F.arm%2FCognitiveServices)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Freal-time-transcription-simple%2Fmain%2F.arm%2FCognitiveServices%2Ftemplate.json%3Ftoken%3DGHSAT0AAAAAAB47JS5FF7GGHL4WUCRINO3WY7EPM3A)
 
 The architecture is shown below:
 
