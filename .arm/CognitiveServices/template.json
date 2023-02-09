@@ -4,14 +4,14 @@
     "parameters": {
         "resourceGroupName": {
             "type": "string",
-            "defaultValue": "transcription",
+            "defaultValue": "myResourceGroup",
             "metadata": {
                 "description": "The name of the resource group to be created."
             }
         },
         "cognitiveServiceName": {
             "type": "string",
-            "defaultValue": "transcription-0000",
+            "defaultValue": "myCognitiveService",
             "metadata": {
                 "description": "The name of the Cognitive Service to be created."
             }
@@ -33,21 +33,21 @@
     },
     "resources": [
         {
-            "type": "Microsoft.CognitiveServices/accounts",
-            "apiVersion": "2017-04-18",
-            "name": "[concat(parameters('resourceGroupName'), '/', parameters('cognitiveServiceName'))]",
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2019-10-01",
+            "name": "[parameters('resourceGroupName')]",
             "location": "[parameters('location')]",
-            "sku": {
-                "name": "[parameters('cognitiveServiceSku')]"
-            },
-            "kind": "SpeechServices",
             "properties": {},
             "resources": [
                 {
-                    "type": "Microsoft.Resources/resourceGroups",
-                    "apiVersion": "2019-10-01",
-                    "name": "[parameters('resourceGroupName')]",
+                    "type": "Microsoft.CognitiveServices/accounts",
+                    "apiVersion": "2017-04-18",
+                    "name": "[concat(parameters('cognitiveServiceName'))]",
                     "location": "[parameters('location')]",
+                    "sku": {
+                        "name": "[parameters('cognitiveServiceSku')]"
+                    },
+                    "kind": "TextAnalytics",
                     "properties": {}
                 }
             ]
