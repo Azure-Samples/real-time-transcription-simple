@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Real Time Transcription - Simple
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository demonstrates how to quickly and easily build a Real Time Transcription running on a web browser.
 
-## Available Scripts
+You will be able to create your first app in less than 1/2 hour.
 
-In the project directory, you can run:
+You can then modify the application to meet your requirements.
 
-### `npm start`
+This post is the number 1 post of a series of posts, demonstrating Azure Speech to Text in real-time, that will be increasingly more complex.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## The Technology Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You will be using: 
 
-### `npm test`
+* **Azure Speech-to-Text**
+* **React.js** with Javascript (with Bootstrap, to make things look good)
+* **Devcontainers** - You can use this repo on your PC/MAC or on Codespaces in Github. This makes it easy for you to develop without having to install Node, NPM, or the React modules you will need
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+By following the steps under [Installation](installation) you wil be able to get started quickly
 
-### `npm run build`
+## The Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You will get an app like the one shown below:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+The architecture is shown below:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+This repository is used to build the application on a personal computer or on GitHub Codespaces. It uses a devcontaier.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You need to have the following on your personal computer (PC, Mac or Linux):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Visual Studio Code - you can install it from here: https://code.visualstudio.com/Download
+* Docker Desktop - you can install it from here: https://docs.docker.com/desktop/
+* Git - you can install it from here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Azure Services
 
-### Analyzing the Bundle Size
+The first step is to enable the required **Azure Cognitive Services**. To do that: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Click the button bellow:
 
-### Making a Progressive Web App
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Freal-time-transcription-simple%2Fmain%2F.arm%2FCognitiveServices%2Ftemplate.json%3Ftoken%3DGHSAT0AAAAAAB47JS5E5ZU636XJRJR6KB2IY7JZORA)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Once you have the prerequisites met:
 
-### Advanced Configuration
+* Clone the repository
+* Open it with Visual Studio Code. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You will get a screen like this:
 
-### Deployment
+* Click **Open with Repository** to open the Devcontainer - node, yarn are installed on it - and that is all you need to run your app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Quickstart
+(Add steps to get up and running quickly)
+
+1. git clone [repository clone url]
+2. cd [repository name]
+3. ...
+
+
+## Demo
+
+A demo app is included to show how to use the project.
+
+To run the demo, follow these steps:
+
+(Add steps to start up the demo)
+
+1.
+2.
+3.
+
+## Resources
+
+(Any additional resources or related projects)
+
+- Link to supporting information
+- Link to similar sample
+- ...
