@@ -19,8 +19,6 @@ You will get an app like the one shown below:
 The architecture is shown below:
 
 
-
-
 ## Getting Started
 
 
