@@ -1,45 +1,30 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "resourceGroupName": {
-            "type": "string",
-            "defaultValue": "myResourceGroup",
-            "metadata": {
-                "description": "The name of the resource group to be created."
-            }
-        },
-        "cognitiveServiceName": {
-            "type": "string",
-            "defaultValue": "myCognitiveService",
-            "metadata": {
-                "description": "The name of the Cognitive Service to be created."
-            }
-        },
-        "cognitiveServiceSku": {
-            "type": "string",
-            "defaultValue": "F0",
-            "metadata": {
-                "description": "The SKU of the Cognitive Service to be created."
-            }
+        "account": {
+            "defaultValue": "transcription0000",
+            "type": "String"
         },
         "location": {
-            "type": "string",
-            "defaultValue": "westus",
-            "metadata": {
-                "description": "The location where the resource group and Cognitive Service will be created."
-            }
+            "defaultValue": "eastus",
+            "type": "String"
+        },
+        "sku": {
+            "defaultValue": "F0",
+            "type": "String"
         }
+
     },
     "variables": {},
     "resources": [
         {
             "type": "Microsoft.CognitiveServices/accounts",
             "apiVersion": "2022-12-01",
-            "name": "[parameters('cognitiveServiceName')]",
+            "name": "[parameters('account')]",
             "location": "[parameters('location')]",
             "sku": {
-                "name": "[parameters('cognitiveServiceSku')]"
+                "name": "[parameters('sku')]"
             },
             "kind": "SpeechServices",
             "identity": {
