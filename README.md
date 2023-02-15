@@ -57,6 +57,8 @@ Once you have the prerequisites met:
 
 You will get a screen like this:
 
+<img src="./pics/resp-001.png" />
+
 * Click **Open with Repository** to open the Devcontainer - node, yarn are installed on it - and that is all you need to run your app.
 
 
