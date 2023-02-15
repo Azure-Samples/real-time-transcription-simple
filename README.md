@@ -6,7 +6,7 @@ You can then fork the application and modify for your needs.
 
 <img src="./pics/resp-002.gif" width=800 />
 
-This post is the number 1 post of a series of posts, demonstrating Azure Speech to Text in real-time, in scenarios that are increasingly more complex. This scenario is the simplest of them all: real-time transcription or spoken work in English, using the standard Azure model.
+This post is the number 1 post of a series of posts, demonstrating Azure Speech to Text in real-time, in scenarios that are increasingly more complex. This scenario is the simplest of them all: real-time transcription of spoken work in English, using the standard Azure model.
 
 ## The Technology Used
 
@@ -97,9 +97,9 @@ You will have a response like this on Visual Studio Code:
 <img src="./pics/resp-003.png" width=400>
 
 
-* Click **Open Webbrowser**
+* Click **Open in Browser**
 
-And you will be the app:
+And, after some time you will see the app on the browser:
 
 <img src="./pics/resp-004.png">
 
