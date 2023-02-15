@@ -2,6 +2,10 @@
 
 This repository demonstrates how to quickly and easily build a Real Time Transcription running on a web browser.
 
+The app that you will deploy will look like this:
+
+<img src="./pics/resp-002.gif">
+
 You will be able to create your first app in less than 1/2 hour.
 
 You can then modify the application to meet your requirements.
