@@ -97,7 +97,7 @@ You will have a response like this on Visual Studio Code:
 <img src="./pics/resp-003.png" width=400>
 
 
-* Click **Open Webbrowser**
+* Click **Open in Browser**
 
 And you will be the app:
 
