@@ -20,7 +20,7 @@ You will be using:
 * **React.js** with Javascript (with Bootstrap, to make things look good)
 * **Devcontainers** - You can use this repo on your PC/MAC or on Codespaces in Github. This makes it easy for you to develop without having to install Node, NPM, or the React modules you will need
 
-By following the steps under [Installation](installation) you wil be able to get started quickly
+By following the steps under [Installation](#installation) you wil be able to get started quickly
 
 ## Architecture
 
@@ -41,6 +41,8 @@ You need to have the following on your personal computer (PC, Mac or Linux):
 * Visual Studio Code - you can install it from here: https://code.visualstudio.com/Download
 * Docker Desktop - you can install it from here: https://docs.docker.com/desktop/
 * Git - you can install it from here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+**NB -> ** Alternative, you can run this application entirely on a [codespace](https://docs.github.com/en/codespaces/overview). 
 
 ### Installation
 
