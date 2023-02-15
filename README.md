@@ -4,7 +4,7 @@ This repository demonstrates how to quickly and easily build a Real Time Transcr
 
 The app that you will deploy will look like this:
 
-<img src="./pics/resp-002.gif">
+<img src="./pics/resp-002.gif" widht=100% />
 
 You will be able to create your first app in less than 1/2 hour.
 
