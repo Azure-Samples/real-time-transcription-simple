@@ -4,22 +4,18 @@
       "cpus": 4
     },
     // "waitFor": "onCreateCommand",
-    "updateContentCommand": "yarn install",
+    "updateContentCommand": "cd webapp && yarn install",
     "postCreateCommand": "",
-    // "postAttachCommand": {
-    //   "server": "yarn start"
-    // },
     "customizations": {
       "codespaces": {
         "openFiles": [
-          "src/App.js"
+          "webapp/src/App.js"
         ]
       }
     },
     "portsAttributes": {
       "3000": {
-        "label": "Application",
-        "onAutoForward": "openPreview"
+        "label": "Application"
       }
     },
     "forwardPorts": [3000]
