@@ -1,14 +1,14 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18",
     "hostRequirements": {
       "cpus": 4
     },
-    "waitFor": "onCreateCommand",
-    "updateContentCommand": "npm install",
+    // "waitFor": "onCreateCommand",
+    "updateContentCommand": "yarn install",
     "postCreateCommand": "",
-    "postAttachCommand": {
-      "server": "npm start"
-    },
+    // "postAttachCommand": {
+    //   "server": "yarn start"
+    // },
     "customizations": {
       "codespaces": {
         "openFiles": [
