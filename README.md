@@ -59,36 +59,50 @@ Once you have the prerequisites met:
 
 You will get a screen like this:
 
-<img src="./pics/resp-001.png" />
+<img src="./pics/resp-001.png" width=400/>
 
 * Click **Reopen in Container** to open the Devcontainer. Node, yarn, etc. are installed on it, and that is all you need to build and run your webapp.
 
 
 
-### Quickstart
-(Add steps to get up and running quickly)
+## Run Webapp
 
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+### Add your secrets
+
+This only needs to be done once.
+
+* Create the .env file. On your Visual Studio code terminal, enter
+
+```
+cd webapp 
+cp env-template .env
+```
+
+* update the file, entering the credentials for your recently created Azure Cognitive Services:
+
+```
+REACT_APP_COG_SERVICE_KEY=<your congnitive service key>
+REACT_APP_COG_SERVICE_LOCATION=<your cognitive service region>
+```
+
+### Run the app
+
+* On the terminal enter:
+
+```
+cd webapp
+yarn start
+```
+
+You will have a response like this on Visual Studio Code:
+
+<img src="">
 
 
-## Demo
+* Click **Open Webbrowser**
 
-A demo app is included to show how to use the project.
+And you will be the app:
 
-To run the demo, follow these steps:
+<img src="">
 
-(Add steps to start up the demo)
 
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
