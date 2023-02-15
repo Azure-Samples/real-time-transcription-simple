@@ -30,7 +30,7 @@ The architecture is shown below:
 
 ### Prerequisites
 
-This repository is used to build the application on a personal computer or on GitHub Codespaces. It uses a devcontaier.
+This repository is used to build the application on a personal computer or on GitHub Codespaces. It uses a [Devcontainers](https://code.visualstudio.com/docs/devcontainers/containers).
 
 You need to have the following on your personal computer (PC, Mac or Linux):
 
