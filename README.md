@@ -98,13 +98,25 @@ yarn start
 
 You will have a response like this on Visual Studio Code:
 
-<img src="">
+<img src="./pics/resp-003.png" width=400>
 
 
 * Click **Open Webbrowser**
 
 And you will be the app:
 
-<img src="">
+<img src="./pics/resp-004.png">
+
+* click **start** and start speaking English. 
+
+It will start transcribing what you say:
+
+<img src="./pics/resp-005.png">
+
+* Click **stop** to stop transcribing.
+
+<img src="./pics/resp-006.png">
+
+* Click **export** to download the transcription.
 
 
