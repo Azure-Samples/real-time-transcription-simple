@@ -99,7 +99,7 @@ You will have a response like this on Visual Studio Code:
 
 * Click **Open in Browser**
 
-And you will be the app:
+And, after some time you will see the app on the browser:
 
 <img src="./pics/resp-004.png">
 
