@@ -22,13 +22,11 @@ You will be using:
 
 By following the steps under [Installation](installation) you wil be able to get started quickly
 
-## The Features
-
-You will get an app like the one shown below:
-
-
+## Architecture
 
 The architecture is shown below:
+
+<img src="./pics/architecture.png">
 
 
 ## Getting Started
