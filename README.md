@@ -1,16 +1,12 @@
 # Real Time Transcription - Simple
 
-This repository demonstrates how to quickly and easily build a Real Time Transcription running on a web browser.
+This repository contains a web-based Real Time Transcription application using Azure Speech to Text, running on a web browser, that you can deploy in less than 1/2 hour. 
 
-The app that you will deploy will look like this:
+You can then fork the application and modify for your needs.
 
 <img src="./pics/resp-002.gif" width=800 />
 
-You will be able to create your first app in less than 1/2 hour.
-
-You can then modify the application to meet your requirements.
-
-This post is the number 1 post of a series of posts, demonstrating Azure Speech to Text in real-time, that will be increasingly more complex.
+This post is the number 1 post of a series of posts, demonstrating Azure Speech to Text in real-time, in scenarios that are increasingly more complex. This scenario is the simplest of them all: real-time transcription or spoken work in English, using the standard Azure model.
 
 ## The Technology Used
 
