@@ -38,7 +38,7 @@ You need to have the following on your personal computer (PC, Mac or Linux):
 * Docker Desktop - you can install it from here: https://docs.docker.com/desktop/
 * Git - you can install it from here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-**NB ->** Alternatively, you can run this application entirely on a [codespace](https://docs.github.com/en/codespaces/overview). 
+**NB ->** Alternatively, you can run this application entirely in a [codespace](https://docs.github.com/en/codespaces/overview). 
 
 ### Installation
 
