@@ -51,7 +51,7 @@ The first step is to enable the required **Azure Cognitive Services**. To do tha
 
 * Click the button bellow:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Freal-time-transcription-simple%2Fmain%2F.arm%2FCognitiveServices%2Ftemplate.json%3Ftoken%3DGHSAT0AAAAAAB47JS5E5ZU636XJRJR6KB2IY7JZORA)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FRenSilvaAU%2Farm-templates%2Fmain%2F.arm%2FCognitiveServices%2Ftemplate.json)
 
 Once you have the prerequisites met:
 
