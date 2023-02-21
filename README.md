@@ -229,7 +229,7 @@ The entire code of this solution is here: [/webapp/src/Components/Transcription.
 
 ## Conclusion
 
-This is the quickest and simple way to build a real-time-transcription webapp using React and javascript. This webapp recognizes English only, and simply transcribes what was said. It uses the standard model, so, some industry or subject specific words may be missed.
+This is the quick and simple way to build a working real-time-transcription webapp using React and javascript. This webapp recognizes English only, and simply transcribes what was said. It uses the standard model, so, some industry or subject specific words may be missed.
 
 Next, you will learn how to recognize other languages, and how to improve accuracy by providing extra vocabulary.
 
