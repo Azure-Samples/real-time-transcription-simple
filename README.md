@@ -1,11 +1,10 @@
 # Real Time Transcription - Simple
 
-This repo contains a fully working web-based Real Time Transcription application, powered by Azure Speech to Text.
-
-You can deploy it to your Azure subscription and local PC in less than 20 minutes, and modify for your specific needs.
+This repo contains a fully working web-based Real Time Transcription application, powered by Azure Speech to Text. You can deploy it to your Azure subscription and local PC in less than 20 minutes. You can then modify it for your specific needs.
 
 It is part 1 of a series of repos on how to build real-time-transcription applications using Azure Speech to Text.
 
+Once you deploy this application, you will have something like this:
 
 <img src="./pics/resp-002.gif" width=800 />
 
