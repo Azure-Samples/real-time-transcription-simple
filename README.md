@@ -122,7 +122,7 @@ It will start transcribing what you say:
 
 This solution demonstrates the use of **Azure Speech to Text**'s Continuous Recognition, using the Javascript SDK.
 
-It follows the instructions provided in this [link](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-recognize-speech?pivots=programming-language-javascript#use-continuous-recognition)
+It follows the instructions provided in this [Azure Speech to Text - Use continuous recognition](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-recognize-speech?pivots=programming-language-javascript#use-continuous-recognition)
 
 The "magic" happens in this part of the code: [/webapp/src/Components/Transcription.js](/webapp/src/Components/Transcription.js)
 
@@ -135,17 +135,17 @@ const speechConfig = sdk.SpeechConfig.fromSubscription("YourSpeechKey", "YourSpe
 In order to capture the computer microphone, we use media services. This is done when the website is first rendered, via this code:
 
 ```
-    const getMedia = async (constraints) => {
-      let stream = null
-      try {
-        stream = await navigator.mediaDevices.getUserMedia(constraints)
-        // stream is then passed to the recognizer
-      } catch (err) {
-        /* handle the error */
-        alert(err)
-        console.log(err)
-      }
-    }
+const getMedia = async (constraints) => {
+  let stream = null
+  try {
+    stream = await navigator.mediaDevices.getUserMedia(constraints)
+    // stream is then passed to the recognizer
+  } catch (err) {
+    /* handle the error */
+    alert(err)
+    console.log(err)
+  }
+}
 ```
 
 We define the audio configuration, to read the stream, using the stream defined above:
@@ -166,51 +166,51 @@ const recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
 And create callbacks for when continuous recognition is running:
 
 ```
-    recognizer.recognizing = (s, e) => {
+recognizer.recognizing = (s, e) => {
 
-      // uncomment to debug
-      // console.log(`RECOGNIZING: Text=${e.result.text}`)
-      setRecognisingText(e.result.text)
-      textRef.current.scrollTop = textRef.current.scrollHeight
-    }
+  // uncomment to debug
+  // console.log(`RECOGNIZING: Text=${e.result.text}`)
+  setRecognisingText(e.result.text)
+  textRef.current.scrollTop = textRef.current.scrollHeight
+}
 
-    recognizer.recognized = (s, e) => {
-      setRecognisingText("")
-      if (e.result.reason === sdk.ResultReason.RecognizedSpeech) {
+recognizer.recognized = (s, e) => {
+  setRecognisingText("")
+  if (e.result.reason === sdk.ResultReason.RecognizedSpeech) {
 
-        // uncomment to debug
-        // console.log(`RECOGNIZED: Text=${e.result.text}`)
+    // uncomment to debug
+    // console.log(`RECOGNIZED: Text=${e.result.text}`)
 
-        setRecognisedText((recognisedText) => {
-          if (recognisedText === '') {
-            return `${e.result.text} `
-          }
-          else {
-            return `${recognisedText}${e.result.text} `
-          }
-        })
-        textRef.current.scrollTop = textRef.current.scrollHeight
+    setRecognisedText((recognisedText) => {
+      if (recognisedText === '') {
+        return `${e.result.text} `
       }
-      else if (e.result.reason === sdk.ResultReason.NoMatch) {
-        console.log("NOMATCH: Speech could not be recognized.")
+      else {
+        return `${recognisedText}${e.result.text} `
       }
-    }
+    })
+    textRef.current.scrollTop = textRef.current.scrollHeight
+  }
+  else if (e.result.reason === sdk.ResultReason.NoMatch) {
+    console.log("NOMATCH: Speech could not be recognized.")
+  }
+}
 
-    recognizer.canceled = (s, e) => {
-      console.log(`CANCELED: Reason=${e.reason}`)
+recognizer.canceled = (s, e) => {
+  console.log(`CANCELED: Reason=${e.reason}`)
 
-      if (e.reason === sdk.CancellationReason.Error) {
-        console.log(`"CANCELED: ErrorCode=${e.errorCode}`)
-        console.log(`"CANCELED: ErrorDetails=${e.errorDetails}`)
-        console.log("CANCELED: Did you set the speech resource key and region values?")
-      }
-      recognizer.stopContinuousRecognitionAsync()
-    }
+  if (e.reason === sdk.CancellationReason.Error) {
+    console.log(`"CANCELED: ErrorCode=${e.errorCode}`)
+    console.log(`"CANCELED: ErrorDetails=${e.errorDetails}`)
+    console.log("CANCELED: Did you set the speech resource key and region values?")
+  }
+  recognizer.stopContinuousRecognitionAsync()
+}
 
-    recognizer.sessionStopped = (s, e) => {
-      console.log("\n    Session stopped event.")
-      recognizer.stopContinuousRecognitionAsync()
-    }
+recognizer.sessionStopped = (s, e) => {
+  console.log("\n    Session stopped event.")
+  recognizer.stopContinuousRecognitionAsync()
+}
 ```
 
 Then, whenever we want the recognizer to run, we run:
@@ -224,5 +224,14 @@ And, to stop it we run:
 ```
 recognizer.stopContinuousRecognitionAsync()
 ```
+
+The entire code of this solution is here: [/webapp/src/Components/Transcription.js](/webapp/src/Components/Transcription.js)
+
+## Conclusion
+
+This is the quickest and simple way to build a real-time-transcription webapp using React and javascript. This webapp recognizes English only, and simply transcribes what was said. It uses the standard model, so, some industry or subject specific words may be missed.
+
+Next, you will learn how to recognize other languages, and how to improve accuracy by providing extra vocabulary.
+
 
 
