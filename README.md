@@ -6,7 +6,7 @@ It is part 1 of a series of repos on how to build real-time-transcription applic
 
 Once you deploy this application, you will have something like this:
 
-<img src="./pics/resp-002.gif" width=800 />
+https://user-images.githubusercontent.com/5172249/220519456-64b79988-3b04-4124-a358-9b3fbfd5b044.mov
 
 This post is the number 1 post of a series of posts, demonstrating Azure Speech to Text in real-time, in scenarios that are increasingly more complex. This scenario is the simplest of them all: real-time transcription of spoken work in English, using the standard Azure model.
 
